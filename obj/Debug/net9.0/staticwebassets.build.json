@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "KRe9dk53Qe2xfoZ8rCw9+HmpXbLN9KAHKnz7X0eNEnk=",
+  "Source": "AppServiceAzureDotnet9",
+  "BasePath": "_content/AppServiceAzureDotnet9",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

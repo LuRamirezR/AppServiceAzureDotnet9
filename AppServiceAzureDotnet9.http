@@ -1,0 +1,6 @@
+@AppServiceAzureDotnet9_HostAddress = http://localhost:5208
+
+GET {{AppServiceAzureDotnet9_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

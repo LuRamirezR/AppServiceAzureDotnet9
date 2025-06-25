@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "WnsIUK3syxc=",
+  "success": true,
+  "projectFilePath": "D:\\Documents\\Codigo\\CURSOS\\NodoEAFIT-Comfama\\Modulo4_Cloud\\03-weatherforecast\\AppServiceAzureDotnet9\\AppServiceAzureDotnet9.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Luisa\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
+    "C:\\Users\\Luisa\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

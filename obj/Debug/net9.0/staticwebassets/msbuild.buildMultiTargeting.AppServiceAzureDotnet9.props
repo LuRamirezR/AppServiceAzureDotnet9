@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AppServiceAzureDotnet9.props" />
+</Project>
