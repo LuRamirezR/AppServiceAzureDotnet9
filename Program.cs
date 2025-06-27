@@ -1,8 +1,16 @@
+using AppServiceAzureDotnet9.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// Configure Entity Framework
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<WeatherContext>(options =>
+    options.UseNpgsql(connectionString));
 
 var app = builder.Build();
 
@@ -14,22 +22,18 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
+// Ensure database is created and migrated
+using (var scope = app.Services.CreateScope())
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
+    var context = scope.ServiceProvider.GetRequiredService<WeatherContext>();
+    context.Database.EnsureCreated();
+}
 
-app.MapGet("/weatherforecast", () =>
+app.MapGet("/weatherforecast", async (WeatherContext context) =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
+    var forecasts = await context.WeatherForecasts.ToListAsync();
+
+    return forecasts.Select(f => new WeatherForecast(f.Date, f.TemperatureC, f.Summary)).ToArray();
 })
 .WithName("GetWeatherForecast");
 

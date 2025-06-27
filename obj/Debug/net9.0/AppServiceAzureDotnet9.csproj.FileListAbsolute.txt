@@ -31,3 +31,4 @@ D:\Documents\Codigo\CURSOS\NodoEAFIT-Comfama\Modulo4_Cloud\03-weatherforecast\Ap
 D:\Documents\Codigo\CURSOS\NodoEAFIT-Comfama\Modulo4_Cloud\03-weatherforecast\AppServiceAzureDotnet9\obj\Debug\net9.0\AppServiceAzureDotnet9.pdb
 D:\Documents\Codigo\CURSOS\NodoEAFIT-Comfama\Modulo4_Cloud\03-weatherforecast\AppServiceAzureDotnet9\obj\Debug\net9.0\AppServiceAzureDotnet9.genruntimeconfig.cache
 D:\Documents\Codigo\CURSOS\NodoEAFIT-Comfama\Modulo4_Cloud\03-weatherforecast\AppServiceAzureDotnet9\obj\Debug\net9.0\ref\AppServiceAzureDotnet9.dll
+D:\Documents\Codigo\CURSOS\NodoEAFIT-Comfama\Modulo4_Cloud\03-weatherforecast\AppServiceAzureDotnet9\obj\Debug\net9.0\AppServiceAzureDotnet9.sourcelink.json
